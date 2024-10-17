@@ -1,0 +1,70 @@
+body {
+  font-family: system-ui;
+  color: #555;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  padding-left: 5rem;
+
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: center; */
+}
+
+#overall-container {
+  /* margin-bottom: 8rem; */
+  transition: opacity 1s;
+  display: flex;
+  align-items: center;
+}
+
+.left-container {
+  float: left;
+}
+
+.choices-container {
+  margin-left: 2rem;
+}
+
+.country {
+  background-color: #fff;
+  box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+  width: 20rem;
+  border-radius: 0.7rem;
+  /* overflow: hidden; */
+}
+
+.country-data {
+  padding: 2.5rem 3.75rem 3rem 3.75rem;
+  font-size: 1.5rem;
+}
+
+.flag {
+  width: 20rem;
+  height: 12rem;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.country__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.input-row {
+  width: 18rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  border-radius: 2rem;
+  padding: 0.8rem 1rem;
+}
+
+.button-div {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: lightblue;
+}

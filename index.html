@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the country</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Guess the country</h1>
+    <h2>Round <span id="round"></span></h2>
+    <div id="overall-container">
+      <div class="left-container">
+        <article class="country">
+          <img class="flag" src="" />
+          <div class="country-data">
+            <p class="country__row">
+              📍<b>Capital: </b><span class="capital">Moscow</span>
+            </p>
+            <p class="country__row">
+              👫<b>Population: </b><span class="population"></span>
+            </p>
+          </div>
+        </article>
+      </div>
+      <div class="choices-container">
+        <form id="choices-form">
+          <div class="input-row" id="input-row1">
+            <input
+              type="radio"
+              id="country-choice1"
+              name="country-choice"
+              value="country-choice1"
+            />
+            <label for="country-choice1" id="country1">Country 1</label><br />
+          </div>
+          <div class="input-row" id="input-row2">
+            <input
+              type="radio"
+              id="country-choice2"
+              name="country-choice"
+              value="country-choice2"
+            />
+            <label for="country-choice2" id="country2">Country 2</label><br />
+          </div>
+          <div class="input-row" id="input-row3">
+            <input
+              type="radio"
+              id="country-choice3"
+              name="country-choice"
+              value="country-choice3"
+            />
+            <label for="country-choice3" id="country3">Country 3</label><br />
+          </div>
+          <div class="input-row" id="input-row4">
+            <input
+              type="radio"
+              id="country-choice4"
+              name="country-choice"
+              value="country-choice4"
+            />
+            <label for="country-choice4" id="country4">Country 4</label><br />
+          </div>
+          <div class="button-div">
+            <button id="submit-button">Submit</button>
+          </div>
+        </form>
+        <div class="button-div">
+          <button id="next-button" hidden>Next</button>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
