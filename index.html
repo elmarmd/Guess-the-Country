@@ -7,69 +7,134 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Guess the country</h1>
-    <h2>Round <span id="round"></span></h2>
-    <div id="overall-container">
-      <div class="left-container">
-        <article class="country">
-          <img class="flag" src="" />
-          <div class="country-data">
-            <p class="country__row">
-              📍<b>Capital: </b><span class="capital">Moscow</span>
-            </p>
-            <p class="country__row">
-              👫<b>Population: </b><span class="population"></span>
-            </p>
-          </div>
-        </article>
-      </div>
-      <div class="choices-container">
-        <form id="choices-form">
-          <div class="input-row" id="input-row1">
-            <input
-              type="radio"
-              id="country-choice1"
-              name="country-choice"
-              value="country-choice1"
-            />
-            <label for="country-choice1" id="country1">Country 1</label><br />
-          </div>
-          <div class="input-row" id="input-row2">
-            <input
-              type="radio"
-              id="country-choice2"
-              name="country-choice"
-              value="country-choice2"
-            />
-            <label for="country-choice2" id="country2">Country 2</label><br />
-          </div>
-          <div class="input-row" id="input-row3">
-            <input
-              type="radio"
-              id="country-choice3"
-              name="country-choice"
-              value="country-choice3"
-            />
-            <label for="country-choice3" id="country3">Country 3</label><br />
-          </div>
-          <div class="input-row" id="input-row4">
-            <input
-              type="radio"
-              id="country-choice4"
-              name="country-choice"
-              value="country-choice4"
-            />
-            <label for="country-choice4" id="country4">Country 4</label><br />
-          </div>
+    <div class="pick-region">
+      <h1>Guess the country</h1>
+      <h2>Pick a Region to Start</h2>
+      <form id="pick-region-form">
+        <div class="input-row" id="region-row1">
+          <input
+            type="radio"
+            id="region-choice1"
+            name="region-choice"
+            value="America"
+          />
+          <label for="region-choice1" id="region1">America</label><br />
+        </div>
+        <div class="input-row" id="region-row2">
+          <input
+            type="radio"
+            id="region-choice2"
+            name="region-choice"
+            value="Caribbean"
+          />
+          <label for="region-choice2" id="region2">Caribbean</label><br />
+        </div>
+        <div class="input-row" id="region-row3">
+          <input
+            type="radio"
+            id="region-choice3"
+            name="region-choice"
+            value="Europe"
+          />
+          <label for="region-choice3" id="region3">Europe</label><br />
+        </div>
+        <div class="input-row" id="region-row4">
+          <input
+            type="radio"
+            id="region-choice4"
+            name="region-choice"
+            value="Asia"
+          />
+          <label for="region-choice4" id="region4">Asia</label><br />
+        </div>
+        <div class="input-row" id="region-row5">
+          <input
+            type="radio"
+            id="region-choice5"
+            name="region-choice"
+            value="Africa"
+          />
+          <label for="region-choice5" id="region5">Africa</label><br />
+        </div>
+        <div class="input-row" id="region-row6">
+          <input
+            type="radio"
+            id="region-choice6"
+            name="region-choice"
+            value="all"
+          />
+          <label for="region-choice6" id="region6">All</label><br />
+        </div>
+        <button>Submit</button>
+      </form>
+    </div>
+    <div id="total-container" hidden>
+      <h1>Guess the country</h1>
+      <h2>Round <span id="round"></span></h2>
+      <div id="overall-container">
+        <div class="left-container">
+          <article class="country">
+            <img class="flag" src="" />
+            <div class="country-data">
+              <p class="country__row">
+                📍<b>Capital: </b><span class="capital"></span>
+              </p>
+              <p class="country__row">
+                👫<b>Population: </b><span class="population"></span>
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="choices-container">
+          <form id="choices-form">
+            <div class="input-row" id="input-row1">
+              <input
+                type="radio"
+                id="country-choice1"
+                name="country-choice"
+                value="country-choice1"
+              />
+              <label for="country-choice1" id="country1">Country 1</label><br />
+            </div>
+            <div class="input-row" id="input-row2">
+              <input
+                type="radio"
+                id="country-choice2"
+                name="country-choice"
+                value="country-choice2"
+              />
+              <label for="country-choice2" id="country2">Country 2</label><br />
+            </div>
+            <div class="input-row" id="input-row3">
+              <input
+                type="radio"
+                id="country-choice3"
+                name="country-choice"
+                value="country-choice3"
+              />
+              <label for="country-choice3" id="country3">Country 3</label><br />
+            </div>
+            <div class="input-row" id="input-row4">
+              <input
+                type="radio"
+                id="country-choice4"
+                name="country-choice"
+                value="country-choice4"
+              />
+              <label for="country-choice4" id="country4">Country 4</label><br />
+            </div>
+            <div class="button-div">
+              <button id="submit-button">Submit</button>
+            </div>
+          </form>
           <div class="button-div">
-            <button id="submit-button">Submit</button>
+            <button id="next-button" hidden>Next</button>
           </div>
-        </form>
-        <div class="button-div">
-          <button id="next-button" hidden>Next</button>
         </div>
       </div>
-      <script src="script.js"></script>
     </div>
+    <button id="replay-button" hidden>Play Again!</button>
+
+    <script src="script.js"></script>
   </body>
 </html>
