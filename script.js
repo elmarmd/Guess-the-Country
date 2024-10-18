@@ -45,7 +45,6 @@ const pickRegion = function (event) {
   }
   let endpoint =
     regionChoice === "all" ? regionChoice : `region/${regionChoice}`;
-  console.log(endpoint);
   document.querySelector(".pick-region").hidden = true;
   fetchData(endpoint);
 };
@@ -55,7 +54,6 @@ const fetchData = function (endpoint) {
   fetch(`https://restcountries.com/v3.1/${endpoint}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       allCountries = data;
       unchosenCountries = data;
       unchosenCountriesTemp = data;
@@ -76,11 +74,9 @@ const recordChoice = function (event) {
     }
   }
   if (userChoice === correctChoice) {
-    console.log("Correct guess!");
     inputDivs[userChoice].style.background = "green";
     score++;
   } else {
-    console.log("Incorrect guess!");
     inputDivs[userChoice].style.background = "red";
     inputDivs[correctChoice].style.background = "green";
   }
@@ -138,9 +134,7 @@ const playRound = function () {
       unchosenCountries.splice(randomCountryIndex, 1);
     }
   }
-  console.log("Before:", unchosenCountries, unchosenCountriesTemp);
   unchosenCountries = [...unchosenCountriesTemp];
-  console.log("After:", unchosenCountries, unchosenCountriesTemp);
 };
 
 const replayGame = function () {
